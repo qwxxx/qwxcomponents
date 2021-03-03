@@ -3,8 +3,7 @@ import 'dart:collection';
 
 import 'package:rxdart/rxdart.dart';
 import 'BlocVsbLib.dart';
-
-enum VNotificationStatus { Readed, InReading, Unreaded }
+import '../globaldeclarations.dart';
 
 class BlocNotificationsBadge extends BlocBase {
   final dynamic globalState;

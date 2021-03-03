@@ -3,9 +3,29 @@ import 'package:qwxcomponents/Bloc/BlocVsbLib.dart';
 import 'package:flutter/material.dart';
 import 'package:qwxcomponents/GUI/RedDotCounter.dart';
 
+import '../Bloc/BlocNotificationsBadge.dart';
+import '../Bloc/BlocVsbLib.dart';
+
 class NotificationsBadge extends StatelessWidget {
+  final dynamic globalState;
   final void Function()? onPressed;
-  NotificationsBadge({this.onPressed});
+  NotificationsBadge({required this.globalState, this.onPressed});
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      bloc: BlocNotificationsBadge(
+        globalState: globalState,
+      ),
+      widget: _NotificationsBadge(
+        onPressed: onPressed,
+      ),
+    );
+  }
+}
+
+class _NotificationsBadge extends StatelessWidget {
+  final void Function()? onPressed;
+  _NotificationsBadge({this.onPressed});
   @override
   Widget build(BuildContext context) {
     var bloc = BlocProvider.of<BlocNotificationsBadge>(context);
