@@ -3,11 +3,13 @@ import 'package:qwxcomponents/Bloc/BlocVsbLib.dart';
 import 'package:flutter/material.dart';
 import 'package:qwxcomponents/GUI/RedDotCounter.dart';
 
+import 'package:rxdart/rxdart.dart';
+import 'dart:collection';
 import '../Bloc/BlocNotificationsBadge.dart';
 import '../Bloc/BlocVsbLib.dart';
 
 class NotificationsBadge extends StatelessWidget {
-  final dynamic globalState;
+  final BehaviorSubject<UnmodifiableListView> globalState;
   final void Function()? onPressed;
   NotificationsBadge({required this.globalState, this.onPressed});
   @override

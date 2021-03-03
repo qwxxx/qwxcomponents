@@ -82,7 +82,6 @@ class BlocImageFullscreenView extends BlocBase {
 
   @override
   void dispose() {
-    print('disp');
     inEvents.close();
     outState.close();
   }

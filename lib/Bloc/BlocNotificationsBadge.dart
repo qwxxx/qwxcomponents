@@ -6,11 +6,11 @@ import 'BlocVsbLib.dart';
 import '../globaldeclarations.dart';
 
 class BlocNotificationsBadge extends BlocBase {
-  final dynamic globalState;
+  final BehaviorSubject<UnmodifiableListView> globalState;
   final BehaviorSubject<int> outNotificationsCount = BehaviorSubject();
   StreamSubscription? notiSub;
   BlocNotificationsBadge({required this.globalState}) {
-    notiSub = globalState.outNotifications.listen((value) => refresh(value));
+    notiSub = globalState.listen((value) => refresh(value));
   }
   void refresh(UnmodifiableListView notifications) {
     var count = 0;

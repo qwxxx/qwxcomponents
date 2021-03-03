@@ -11,9 +11,7 @@ class DockBar extends StatelessWidget {
       this.currentIndex = 0,
       this.selectedItemColor = Colors.white})
       : super();
-  void dispose() {
-    print('wow');
-  }
+  void dispose() {}
 
   @override
   Widget build(BuildContext context) {
