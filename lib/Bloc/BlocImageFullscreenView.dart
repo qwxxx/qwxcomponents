@@ -23,10 +23,6 @@ class ImageFullscreenViewState {
   ImageFullscreenViewState({required this.opacity});
 }
 
-class ImageFullscreenCloseState extends ImageFullscreenViewState {
-  ImageFullscreenCloseState() : super(opacity: 0);
-}
-
 class ImageFullscreenZoomState extends ImageFullscreenViewState {
   ImageFullscreenZoomState() : super(opacity: 0);
 }
@@ -69,8 +65,6 @@ class BlocImageFullscreenView extends BlocBase {
         if (currentSwipe > maxSwipe &&
             !isClosed &&
             state.runtimeType == ImageFullscreenSleepState) {
-          isClosed = true;
-          state = (ImageFullscreenCloseState());
         } else if (currentSwipe.abs() < maxSwipe) {
           state = ImageFullscreenSleepState(
               opacity: (0.85 - (currentSwipe.abs()) / maxSwipe * 0.85));
