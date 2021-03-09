@@ -1,9 +1,7 @@
 name: qwxcomponents
-description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
-
+description: Flutter package that contains prebuilded components for creating mobile apps easily.
+version: 0.0.1-dev.2
+homepage: https://github.com/qwxxx/qwxcomponents
 environment:
   sdk: ">=2.12.0-0 <3.0.0"
   flutter: ">=1.17.0"
@@ -11,21 +9,39 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  provider: ^5.0.0
+  rxdart: ^0.26.0
+  shimmer: ^2.0.0-nullsafety.0
+  extended_image: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  provider: ^5.0.0-nullsafety.5
-  rxdart: ^0.26.0
-  shimmer: ^2.0.0-nullsafety.0
-  extended_image: ^3.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
-flutter:
 
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.qwxcomponents
+        pluginClass: QwxcomponentsPlugin
+      ios:
+        pluginClass: QwxcomponentsPlugin
+      macos:
+        pluginClass: QwxcomponentsPlugin
+      linux:
+        pluginClass: QwxcomponentsPlugin
+      windows:
+        pluginClass: QwxcomponentsPlugin
+      web:
+        pluginClass: QwxcomponentsPlugin
+        fileName: qwxcomponents_web.dart
 
   # To add assets to your package, add an assets section, like this:
   # assets:
