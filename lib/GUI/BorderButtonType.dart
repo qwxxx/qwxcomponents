@@ -6,15 +6,11 @@ BorderRadius getBorderRadius(BorderButtonType type) {
   switch (type) {
     case BorderButtonType.Central:
       return BorderRadius.zero;
-      break;
     case BorderButtonType.First:
       return BorderRadius.vertical(top: Radius.circular(7.0));
-      break;
     case BorderButtonType.Last:
       return BorderRadius.vertical(bottom: Radius.circular(7.0));
-      break;
     case BorderButtonType.Single:
       return BorderRadius.circular(7.0);
-      break;
   }
 }

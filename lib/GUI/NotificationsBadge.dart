@@ -54,7 +54,6 @@ class _NotificationsBadge extends StatelessWidget {
                       counterType: CounterType.WithDot,
                       count: snapshot.data!,
                     ));
-              ;
             }),
       ],
     );

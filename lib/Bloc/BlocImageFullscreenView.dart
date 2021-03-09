@@ -1,6 +1,5 @@
 import 'package:rxdart/rxdart.dart';
 import 'lib/BlocBase.dart';
-import 'dart:math';
 
 class ImageFullscreenViewEvent {}
 
@@ -52,10 +51,8 @@ class BlocImageFullscreenView extends BlocBase {
       case ImageFullscreenViewInteractionStartEvent:
         break;
       case ImageFullscreenViewInteractionUpdateEvent:
-        var updateEvent = event as ImageFullscreenViewInteractionUpdateEvent;
         break;
       case ImageFullscreenViewInteractionEndEvent:
-        var endEvent = event as ImageFullscreenViewInteractionEndEvent;
         break;
       case ImageFullscreenViewSwipeEvent:
         var swipe = event as ImageFullscreenViewSwipeEvent;

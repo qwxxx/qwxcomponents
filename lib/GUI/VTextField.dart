@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class VTextField extends StatelessWidget {
   final void Function(String)? onChanged;
-  String? placeholderText;
+  final String? placeholderText;
   VTextField({Key? key, this.onChanged, this.placeholderText})
       : super(key: key);
   void clear() {}

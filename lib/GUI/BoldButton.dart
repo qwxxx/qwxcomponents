@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'BorderButtonType.dart';
 
 class BoldButton extends StatelessWidget {
-  void Function()? onPressed;
-  String text;
-  Color color;
-  BorderButtonType type;
-  Color textColor;
-  double fontSize;
+  final void Function()? onPressed;
+  final String text;
+  final Color color;
+  final BorderButtonType type;
+  final Color textColor;
+  final double fontSize;
   BoldButton({
     this.onPressed,
     this.text = "",
@@ -20,14 +20,15 @@ class BoldButton extends StatelessWidget {
   Widget build(BuildContext context) {
     /*if (textColor == null)
       textColor = Theme.of(context).textTheme.bodyText1.color??Colors.black;*/
+    var colorT = textColor;
     if (textColor == Colors.black || textColor == Colors.white)
-      textColor = Theme.of(context).textTheme.bodyText1?.color ?? textColor;
+      colorT = Theme.of(context).textTheme.bodyText1?.color ?? textColor;
     return TextButton(
       onPressed: onPressed,
       child: Text(
         text,
         style: TextStyle(
-          color: textColor,
+          color: colorT,
           fontWeight: FontWeight.bold,
           fontSize: this.fontSize,
           letterSpacing: 1.3,

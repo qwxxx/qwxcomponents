@@ -1,4 +1,4 @@
-library componentsLibrary;
+library components_library;
 
 export 'BoldButton.dart';
 export 'VListView.dart';

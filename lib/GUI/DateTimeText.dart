@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DateTimeText extends StatelessWidget {
-  DateTime _dateTime;
-  Color color;
+  final DateTime _dateTime;
+  final Color color;
   DateTimeText(this._dateTime, {this.color = Colors.white});
 
   @override

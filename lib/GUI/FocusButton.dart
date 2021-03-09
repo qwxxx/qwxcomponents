@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class FocusButton extends StatelessWidget {
   final String text;
-  void Function()? onPressed;
+  final void Function()? onPressed;
 
-  double fontSize;
-  Color textColor;
+  final double fontSize;
+  final Color textColor;
   FocusButton(
       {required this.text,
       this.onPressed,
@@ -14,9 +14,8 @@ class FocusButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (onPressed == null) onPressed = () {};
     return TextButton(
-      onPressed: onPressed,
+      onPressed: onPressed ?? () {},
       child: Text(
         text,
         style: TextStyle(
