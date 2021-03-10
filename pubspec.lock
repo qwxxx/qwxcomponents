@@ -51,7 +51,7 @@ packages:
     source: hosted
     version: "3.0.0"
   extended_image:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: extended_image
       url: "https://pub.dartlang.org"
@@ -95,6 +95,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   http:
     dependency: transitive
     description:
@@ -116,6 +121,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.3"
   matcher:
     dependency: transitive
     description:
@@ -208,21 +220,21 @@ packages:
     source: hosted
     version: "4.1.0"
   provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.0-nullsafety.5"
+    version: "5.0.0"
   rxdart:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.26.0"
   shimmer:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: shimmer
       url: "https://pub.dartlang.org"

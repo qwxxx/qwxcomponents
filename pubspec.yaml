@@ -1,6 +1,6 @@
 name: qwxcomponents
 description: Flutter package that contains prebuilded components for creating mobile apps easily.
-version: 0.0.1-dev.2
+version: 0.0.1-dev.3
 homepage: https://github.com/qwxxx/qwxcomponents
 environment:
   sdk: ">=2.12.0-0 <3.0.0"

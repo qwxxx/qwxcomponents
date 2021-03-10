@@ -1,6 +1,6 @@
 library components_library;
 
-export 'BoldButton.dart';
+export 'BorderButton.dart';
 export 'VListView.dart';
 export 'VTextField.dart';
 export 'MainScaffold.dart';

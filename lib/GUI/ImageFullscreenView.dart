@@ -12,7 +12,7 @@ class ImageFullscreenView extends StatelessWidget {
     var bloc = BlocProvider.of<BlocImageFullscreenView>(context);
     final maxScroll = MediaQuery.of(context).size.height / 4;
     return StreamBuilder<ImageFullscreenViewState>(
-      initialData: ImageFullscreenSleepState(opacity: 0.85),
+      initialData: ImageFullscreenViewState(opacity: 0.85),
       stream: bloc.outState,
       builder: (context, snapshot) => ExtendedImageSlidePage(
         slidePageBackgroundHandler: (_, __) {

@@ -27,7 +27,10 @@ class FrameImage extends StatelessWidget {
       frameBuilder: (BuildContext context, Widget child, int? frame,
           bool? wasSynchronouslyLoaded) {
         if (frame != null) {
-          return child;
+          return GestureDetector(
+            child: child,
+            onTap: this.onTap,
+          );
         } else
           return StandardShimmer(
             child: Container(
@@ -37,9 +40,6 @@ class FrameImage extends StatelessWidget {
           );
       },
     );
-    return GestureDetector(
-      child: a,
-      onTap: this.onTap,
-    );
+    return a;
   }
 }
