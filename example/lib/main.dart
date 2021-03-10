@@ -41,7 +41,6 @@ class MyApp extends StatelessWidget {
                     onPressed: () {},
                     text: 'MarkedButtion with Unimportant',
                     textRight: 'textRight',
-                    textUnder: 'textUnder',
                     importantType: MarkedButtonInfoType.Unimportant,
                   ),
                 ],

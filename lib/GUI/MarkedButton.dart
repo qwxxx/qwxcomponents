@@ -4,6 +4,7 @@ import 'BorderButton.dart';
 
 enum MarkedButtonInfoType { Important, Unimportant }
 
+///Button with elevated=0 and ability to add Text at right or down
 class MarkedButton extends AbstractBorderButton {
   final void Function()? onPressed;
   final Icon icon;
@@ -36,9 +37,6 @@ class MarkedButton extends AbstractBorderButton {
     } catch (e) {
       type = BorderButtonType.Single;
     }
-    /*if (textColor == null) {
-      textColor = Theme.of(context).textTheme.bodyText1?.color ?? Colors.white;
-    }*/
     Widget infoWidgetRight = Spacer();
     Widget infoWidgetUnder = SizedBox();
     switch (importantType) {
@@ -68,8 +66,9 @@ class MarkedButton extends AbstractBorderButton {
         );
         break;
     }
-    infoWidgetUnder = Text(textUnder ?? '',
-        style: TextStyle(color: underColor ?? Theme.of(context).accentColor));
+    if (textUnder != null)
+      infoWidgetUnder = Text(textUnder!,
+          style: TextStyle(color: underColor ?? Theme.of(context).accentColor));
     return ElevatedButton(
       onPressed: onPressed,
       child: Row(
